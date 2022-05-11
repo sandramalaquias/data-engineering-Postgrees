@@ -13,7 +13,7 @@ The goal is to create a database schema and ETL pipeline for this analysis and c
 
 This project on data modeling was made with Postgres defining fact and dimension tables (star schema) for a particular analytic focus. And has an ETL pipeline using Python to transfers data from files in two local directories into these tables .
 
-# Files
+## Files
 
 ### Song Dataset
 
@@ -44,7 +44,7 @@ And below is an example of what the data in a log file, 2018-11-12-events.json, 
 ![](https://video.udacity-data.com/topher/2019/February/5c6c15e9_log-data/log-data.png)
 This dataset was distributed into time, users, and songs_play table.
 
-### Entity Relationship Diagram (ERD) - Star Schema
+## Entity Relationship Diagram (ERD) - Star Schema
 
 <a href="https://ibb.co/DDTg6GK"><img src="https://i.ibb.co/hRw1nX8/udacity.png" alt="udacity" border="0"></a>
 
@@ -60,7 +60,7 @@ This dataset was distributed into time, users, and songs_play table.
 ## Run the scripts
 The scripts of this project consist in create tables and run the ETL.
 
-#### The environment:
+### The environment:
 -  Python versions from 3.6 to 3.10    
 -  PostgreSQL server versions from 7.4 to 14    
 -  PostgreSQL client library version from 9.1
@@ -70,13 +70,13 @@ The scripts of this project consist in create tables and run the ETL.
 - OS lib
 - Datetime lib
  
-#### Create table
+### Create table
 To create tables use the scripts:
 - Statements in `sql_queries.py` to create each table (using DDL – Data Definition Language)
 - Run `create_tables.py` at console to create your database and tables.
 - Run `test.ipynb` to confirm the creation of your tables with the correct columns. 
 	
-#### Run the ETL
+### Run the ETL
 To make the ETL use the scripts:
 - Statements in `sql_queries.py `to insert records into each table (using DML - Data Manipulation Language)
 - Run `etl.py` at console
@@ -86,7 +86,7 @@ To make the ETL use the scripts:
 #### More in this project
 To understanding the files and data use the  `etl.ipynb `
 
-### Data Analytics
+## Data Analytics
 
 Using this ERD and their tables, is an easier way to create queries to answer the single question to analytics issues like:
 - which level of user  (paid/free) listen  more musics
