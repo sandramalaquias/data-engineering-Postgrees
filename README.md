@@ -44,7 +44,7 @@ And below is an example of what the data in a log file, 2018-11-12-events.json, 
 ![](https://video.udacity-data.com/topher/2019/February/5c6c15e9_log-data/log-data.png)
 This dataset was distributed into time, users, and songs_play table.
 
-### Entity Relationship Diagram (ERD) - Star Schema choose
+### Entity Relationship Diagram (ERD) - Star Schema
 
 <a href="https://ibb.co/DDTg6GK"><img src="https://i.ibb.co/hRw1nX8/udacity.png" alt="udacity" border="0"></a>
 
@@ -72,9 +72,9 @@ The scripts of this project consist in create tables and run the ETL.
  
 #### Create table
 To create tables use the scripts:
-	-  Statements in `sql_queries.py` to create each table (using DDL – Data Definition Language)
-	- Run `create_tables.py` at console to create your database and tables.
-	- Run `test.ipynb` to confirm the creation of your tables with the correct columns. 
+- Statements in `sql_queries.py` to create each table (using DDL – Data Definition Language)
+- Run `create_tables.py` at console to create your database and tables.
+- Run `test.ipynb` to confirm the creation of your tables with the correct columns. 
 	
 #### Run the ETL
 To make the ETL use the scripts:
