@@ -83,16 +83,16 @@ time_table_insert = """INSERT INTO time
                        values (%s, %s, %s, %s, %s, %s, %s, %s)
                        ON CONFLICT (start_time) DO NOTHING"""   
 
-user_table_insert = """INSERT INTO users 
+#on conflict, update "LEVEL" only if the new value is not null
+user_table_insert = """INSERT INTO users as us
                       (user_id, first_name, last_name, gender, level) 
                       values (%s, %s, %s, %s, %s)
-                      ON CONFLICT (user_id) DO NOTHING"""
-                       
-
+                      ON CONFLICT (user_id) DO UPDATE 
+                      SET level = COALESCE(EXCLUDED.level, us.level)"""                     
 
 # FIND SONGS
 
-song_select = song_select = """SELECT  songs.song_id, artists.artist_id FROM songs 
+song_select = """SELECT  songs.song_id, artists.artist_id FROM songs 
                 inner join artists on songs.artist_id = artists.artist_id
                  WHERE  songs.duration = %s
                    and  songs.title like %s ESCAPE ''
