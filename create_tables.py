@@ -1,3 +1,11 @@
+"""
+    Description: This script is responsible for create sparkify database and its tablesisting the files in a directory,
+    and then executing the ingest process for each file according to the function
+    that performs the transformation to save it to the database.
+"""
+
+
+
 import psycopg2
 from sql_queries import create_table_queries, drop_table_queries
 
@@ -30,6 +38,7 @@ def create_database():
 def drop_tables(cur, conn):
     """
     Drops each table using the queries in `drop_table_queries` list.
+    The queries are in sql_queries.py
     """
     for query in drop_table_queries:
         print (query)
@@ -39,7 +48,8 @@ def drop_tables(cur, conn):
 
 def create_tables(cur, conn):
     """
-    Creates each table using the queries in `create_table_queries` list. 
+    Creates each table using the queries in `create_table_queries` list.
+    The queries are in sql_queries.py
     """
     for query in create_table_queries:
         cur.execute(query)
